@@ -13,37 +13,37 @@ const team = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        image: 'wayne-barnett-founder-ceo.jpg',
+        image: 'img/wayne-barnett-founder-ceo.jpg',
     },
 
     {
         name:'Angela Caroll',
         role:'Chief Editor',
-        image:'angela-caroll-chief-editor.jpg',
+        image:'img/angela-caroll-chief-editor.jpg',
     },
 
     {
         name:'Walter Gordon',
         role:'Office Manager',
-        image:'walter-gordon-office-manager.jpg',
+        image:'img/walter-gordon-office-manager.jpg',
     },
 
     {
         name:'Angela Lopez',
         role:'Social Media Manager',
-        image:'angela-lopez-social-media-manager.jpg',
+        image:'img/angela-lopez-social-media-manager.jpg',
     },
 
     {
         name:'Scott Estrada',
         role:'Developer',
-        image:'scott-estrada-developer.jpg',
+        image:'img/scott-estrada-developer.jpg',
     },
 
     {
         name:'Barbara Ramos',
         role:'Graphic Designer',
-        image:'barbara-ramos-graphic-designer.jpg',
+        image:'img/barbara-ramos-graphic-designer.jpg',
     },
 ];
 
@@ -79,6 +79,8 @@ userInfo();
 
 //console.log (team);
 
+/*
+Caricamento info componenti del team nel dom in stringa
 function userInfo(){
 
     for (let i = 0; i < team.length; i++){
@@ -86,5 +88,32 @@ function userInfo(){
         user.innerHTML += 'Nome:' + ' ' + team[i].name + ' '  + 'Ruolo:' +  ' ' + team[i].role + ' ' + 'Foto Profilo' + ' ' + team[i].image + ' ';
         main.append(user);
     }
+    
+}*/
+
+//Caricamento info componenti del team nel dom organizzandoli in card
+function userInfo (){
+
+    for (let i = 0; i < team.length; i++){
+
+        const card = document.createElement('div');
+        main.append(card);
+        const userName = document.createElement('h2');
+        userName.innerHTML += 'Nome:' + ' ' + team[i].name;
+        card.append(userName);
+
+        const userRole = document.createElement('h3');
+        userRole.innerHTML += 'Ruolo:' + ' ' + team[i].role;
+        card.append(userRole);
+
+        const imgContainer = document.createElement('div');
+        
+        const userImage = document.createElement('img');
+        userImage.src +=team[i].image;
+        imgContainer.append(userImage);
+        card.append(imgContainer);
+        
+    }
+
     
 }
