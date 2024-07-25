@@ -47,4 +47,16 @@ const team = [
     },
 ];
 
+//step 2
+
+console.log('Info sui componenti del team');
+
+console.log(team[0]);
+console.log(team[1]);
+console.log(team[2]);
+console.log(team[3]);
+console.log(team[4]);
+console.log(team[5]);
+
+
 //console.log (team);
