@@ -50,6 +50,7 @@ const team = [
 //step 2
 
 console.log('Info sui componenti del team');
+// primo modo selezionarli singolarmente
 
 console.log(team[0]);
 console.log(team[1]);
@@ -58,5 +59,32 @@ console.log(team[3]);
 console.log(team[4]);
 console.log(team[5]);
 
+// secondo modo selezionarli con un ciclo for in 
+
+/*for (let key in team){
+
+    console.log (key, team[key]);
+}*/
+
+//step 3
+
+//const main = document.querySelector('main');
+//const user1 = document.createElement('div');
+console.log('name:', team[0]['name'], 'role:', team[0]['role'], 'image:', team[0]['image']) ;
+//main.append(user1);
+
+
+userInfo();
+
 
 //console.log (team);
+
+function userInfo(){
+
+    for (let i = 0; i < team.length; i++){
+        const user = document.createElement('div');
+        user.innerHTML += 'Nome:' + ' ' + team[i].name + ' '  + 'Ruolo:' +  ' ' + team[i].role + ' ' + 'Foto Profilo' + ' ' + team[i].image + ' ';
+        main.append(user);
+    }
+    
+}

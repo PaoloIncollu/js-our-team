@@ -7,3 +7,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#main{
+    width: fit-content;
+    margin: 50px auto;
+}
+
+#main > div {
+
+    margin: 20px auto;
+}
