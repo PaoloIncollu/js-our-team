@@ -13,37 +13,37 @@ const team = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        image: 'img/wayne-barnett-founder-ceo.jpg',
+        image: 'wayne-barnett-founder-ceo.jpg',
     },
 
     {
         name:'Angela Caroll',
         role:'Chief Editor',
-        image:'img/angela-caroll-chief-editor.jpg',
+        image:'angela-caroll-chief-editor.jpg',
     },
 
     {
         name:'Walter Gordon',
         role:'Office Manager',
-        image:'img/walter-gordon-office-manager.jpg',
+        image:'walter-gordon-office-manager.jpg',
     },
 
     {
         name:'Angela Lopez',
         role:'Social Media Manager',
-        image:'img/angela-lopez-social-media-manager.jpg',
+        image:'angela-lopez-social-media-manager.jpg',
     },
 
     {
         name:'Scott Estrada',
         role:'Developer',
-        image:'img/scott-estrada-developer.jpg',
+        image:'scott-estrada-developer.jpg',
     },
 
     {
         name:'Barbara Ramos',
         role:'Graphic Designer',
-        image:'img/barbara-ramos-graphic-designer.jpg',
+        image:'barbara-ramos-graphic-designer.jpg',
     },
 ];
 
@@ -51,33 +51,25 @@ const team = [
 
 console.log('Info sui componenti del team');
 // primo modo selezionarli singolarmente
-
+/*
 console.log(team[0]);
 console.log(team[1]);
 console.log(team[2]);
 console.log(team[3]);
 console.log(team[4]);
 console.log(team[5]);
+*/
 
 // secondo modo selezionarli con un ciclo for in 
 
-/*for (let key in team){
+for (let key in team){
 
-    console.log (key, team[key]);
-}*/
+    console.log (team[key]);
+}
 
 //step 3
 
-//const main = document.querySelector('main');
-//const user1 = document.createElement('div');
-console.log('name:', team[0]['name'], 'role:', team[0]['role'], 'image:', team[0]['image']) ;
-//main.append(user1);
-
-
 userInfo();
-
-
-//console.log (team);
 
 /*
 Caricamento info componenti del team nel dom in stringa
@@ -109,7 +101,7 @@ function userInfo (){
         const imgContainer = document.createElement('div');
         
         const userImage = document.createElement('img');
-        userImage.src +=team[i].image;
+        userImage.src += 'img/' + team[i].image;
         imgContainer.append(userImage);
         card.append(imgContainer);
         
@@ -117,3 +109,4 @@ function userInfo (){
 
     
 }
+
